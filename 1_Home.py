@@ -35,7 +35,7 @@ st.markdown("""## Tips
 """)
 st.markdown("---")
 st.markdown(""" ## Findings
-- The **PIPS** has demonstrated vulnerabilities where it can be bypassed through prompt injection attacks. While attempts to jailbreak PIPS often result in responses that are malformed and not parsable by the system, preventing malicious prompts from reaching the main AI model, it is not entirely foolproof.
+- The **PIPS** has demonstrated vulnerabilities where it can be bypassed through prompt injection attacks. While attempts to jailbreak PIPS often result in responses that are malformed and not parsable by the code, preventing malicious prompts from reaching the main AI model, it is not entirely foolproof.
 - PIPS exhibits a high degree of sensitivity to updates in the underlying AI models. This poses challenges in maintaining its effectiveness post-model updates. In practical applications, a PIPS will require fine-tuning to avoid inconsistencies when the underlying model is updated. During testing, updates caused unpredictable false negative rates, undermining the system's reliability.
 """)
 
@@ -52,6 +52,9 @@ Their attempts were effectively mitigated by incorporating them into the PIPS sy
 st.markdown("""
 **Note**: This version of the PIPS will be significantly easier to jailbreak than the version used in the challenge. This is solely because of the examples provided to the model and the model used this site serves as a demonstration.
 """) 
+
+# Add a link to the 2_chat page
+st.page_link("Try it out!", "2_chat")
 
 st.sidebar.markdown("---")
 st.sidebar.markdown("Version: 6")
