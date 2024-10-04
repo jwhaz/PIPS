@@ -6,7 +6,7 @@ from pips import (
 from util import (
     generate_conversation_id,
 )
-
+import os
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -15,11 +15,9 @@ if "conversation_id" not in st.session_state:
 if "api_key" not in st.session_state:
     st.session_state.api_key = ""
 
-st.session_state.api_key = st.sidebar.text_input("OpenAI API Key:", type="password")
+# Set the API key from an environment variable
+st.session_state.api_key = os.getenv("OPENAI_API_KEY")
 
-if not st.session_state.api_key:
-    st.sidebar.error("Please enter your API key to use the chat.")
-    st.stop()
 
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
