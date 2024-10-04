@@ -53,8 +53,7 @@ st.markdown("""
 **Note**: This version of the PIPS will be significantly easier to jailbreak than the version used in the challenge. This is solely because of the examples provided to the model and the model used this site serves as a demonstration.
 """) 
 
-# Add a link to the 2_chat page
-st.page_link("Try it out!", "2_chat")
+st.page_link("pages/2_Chat.py", label="Try it out!")
 
 st.sidebar.markdown("---")
 st.sidebar.markdown("Version: 6")
