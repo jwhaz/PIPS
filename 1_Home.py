@@ -10,7 +10,7 @@ st.title("Prompt Injection Prevention System (PIPS)")
 st.markdown("""
 ## TLDR
 - **Purpose**: Protect AI models from jailbreaks without compromising performance.
-- **Key to Success**: Use few-shot examples of jailbreak attempts within the Input Output Examples section of the system prompt. Regularly update the system prompt with successful or near-successful attempts. This can be done in real-time.
+- **Key to Success**: Use few-shot examples of jailbreak attempts in the system prompt and update it with new attempts in real-time.
 """) 
 
 st.markdown("---")

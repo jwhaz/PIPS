@@ -15,9 +15,7 @@ if "conversation_id" not in st.session_state:
 if "api_key" not in st.session_state:
     st.session_state.api_key = ""
 
-# Set the API key from an environment variable
 st.session_state.api_key = os.getenv("OPENAI_API_KEY")
-
 
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
@@ -33,7 +31,7 @@ if prompt := st.chat_input("Message gpt-4o-mini", max_chars=20000):
     except Exception as e:
         pips_result = None
         all_messages = None
-        result = None  # Ensure all variables are defined
+        result = None  
 
     if st.session_state.messages:
         context = f"{st.session_state.messages[-1]['role']}: {st.session_state.messages[-1]['content']}"
