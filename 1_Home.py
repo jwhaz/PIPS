@@ -34,8 +34,13 @@ st.markdown("""## Tips
 - **Regular System Prompt Reviews**: Periodically review and refine the system prompts based on the latest threat patterns identified by PIPS. This ensures that the security measures remain robust against evolving attacks.
 """)
 st.markdown("---")
-st.markdown("""
-## Successful Jailbreakers
+st.markdown(""" ## Findings
+- The **PIPS** has demonstrated vulnerabilities where it can be bypassed through prompt injection attacks. While attempts to jailbreak PIPS often result in responses that are malformed and not parsable by the system, preventing malicious prompts from reaching the main AI model, it is not entirely foolproof.
+- PIPS exhibits a high degree of sensitivity to updates in the underlying AI models. This poses challenges in maintaining its effectiveness post-model updates. In practical applications, PIPS requires continuous fine-tuning to align with the evolving capabilities of models like GPT-4o and Claude-3.5-sonnet. During testing, frequent model switches due to unpredictable strictness levels led to approximately 80% false negative rates, undermining the system's reliability.
+""")
+
+st.markdown("---")
+st.markdown(""" ## Successful Jailbreakers
 
 1. Discord: whathefun (Locpet)
 2. Discord: sidfeels (Sid ᶻᵒⁿᵉᵈᵒᵗ)
@@ -45,7 +50,7 @@ Their attempts were effectively mitigated by incorporating them into the PIPS sy
 """)
 
 st.markdown("""
-**Note**: This version of the PIPS will be significantly easier to jailbreak than the version used in the challenge. This is solely because of the examples and context provided to the model.
+**Note**: This version of the PIPS will be significantly easier to jailbreak than the version used in the challenge. This is solely because of the examples provided to the model and the model used this site serves as a demonstration.
 """) 
 
 st.sidebar.markdown("---")
