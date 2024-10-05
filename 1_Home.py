@@ -37,6 +37,7 @@ st.markdown("---")
 st.markdown(""" ## Findings
 - The **PIPS** has demonstrated vulnerabilities where it can be bypassed through prompt injection attacks. While attempts to jailbreak PIPS often result in responses that are malformed and not parsable by the code, preventing malicious prompts from reaching the main AI model, it is not entirely foolproof.
 - PIPS exhibits a high degree of sensitivity to updates in the underlying AI models. This poses challenges in maintaining its effectiveness post-model updates. In practical applications, a PIPS will require fine-tuning to avoid inconsistencies when the underlying model is updated. During testing, updates caused unpredictable false negative rates, undermining the system's reliability.
+- Initially, using `<sandbox>` tags with a random code (e.g., `<sandbox_12345>`) effectively isolated user prompts from the rest of the input, preventing adversarial instruction attempts. However, this approach eventually complicated the queries, leading to numerous false positives. This method is currently under review and has been temporarily removed.
 """)
 
 st.markdown("---")
