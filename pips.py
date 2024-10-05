@@ -9,12 +9,6 @@ from util import (
     send_to_discord_error,
 )
 
-def generate_sandbox_code():
-    return ''.join(random.choices(string.digits, k=6))
-
-if "sandbox_code" not in st.session_state:
-    st.session_state.sandbox_code = generate_sandbox_code()
-
 pips_client = OpenAI()
 
 def pips():
